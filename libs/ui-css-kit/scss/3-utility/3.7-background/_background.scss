@@ -1,0 +1,61 @@
+@use './../../2-abstract/mixins/utility-generator' as *;
+
+/**
+* @section Background
+* @description Sets the color of an element's background
+* @weight 7
+* @key background
+* @loop u-bg-%, white, gray-50, gray-100, gray-200, gray-300, gray-400, gray-500, gray-600, gray-700, gray-800, gray-900, amber-500, orange-500, info, success, warning, danger, info-light, success-light, warning-light, danger-light, essentials, professional, enterprise, aws, azure, datacenter, highlight, default, transparent
+* @loop hover:u-bg-%, white, gray-50, gray-100, gray-200, gray-300, gray-400, gray-500, gray-600, gray-700, gray-800, gray-900
+*/
+
+$bg-color-props: (
+	'u-bg-white': rgb(var(--ald-g-color-white), var(--ald-g-bg-transparency)),
+	'u-bg-gray-50': rgb(var(--ald-g-color-gray-50), var(--ald-g-bg-transparency)),
+	'u-bg-gray-100': rgb(var(--ald-g-color-gray-100), var(--ald-g-bg-transparency)),
+	'u-bg-gray-200': rgb(var(--ald-g-color-gray-200), var(--ald-g-bg-transparency)),
+	'u-bg-gray-300': rgb(var(--ald-g-color-gray-300), var(--ald-g-bg-transparency)),
+	'u-bg-gray-400': rgb(var(--ald-g-color-gray-400), var(--ald-g-bg-transparency)),
+	'u-bg-gray-500': rgb(var(--ald-g-color-gray-500), var(--ald-g-bg-transparency)),
+	'u-bg-gray-600': rgb(var(--ald-g-color-gray-600), var(--ald-g-bg-transparency)),
+	'u-bg-gray-700': rgb(var(--ald-g-color-gray-700), var(--ald-g-bg-transparency)),
+	'u-bg-gray-800': rgb(var(--ald-g-color-gray-800), var(--ald-g-bg-transparency)),
+	'u-bg-gray-900': rgb(var(--ald-g-color-gray-900), var(--ald-g-bg-transparency)),
+	'u-bg-amber-500': rgb(var(--ald-g-color-amber-500), var(--ald-g-bg-transparency)),
+	'u-bg-orange-500': rgb(var(--ald-g-color-orange-500), var(--ald-g-bg-transparency)),
+	'u-bg-info': rgb(var(--ald-g-color-info-bg), var(--ald-g-bg-transparency)),
+	'u-bg-success': rgb(var(--ald-g-color-success-bg), var(--ald-g-bg-transparency)),
+	'u-bg-warning': rgb(var(--ald-g-color-warning-bg), var(--ald-g-bg-transparency)),
+	'u-bg-danger': rgb(var(--ald-g-color-danger-bg), var(--ald-g-bg-transparency)),
+	'u-bg-info-light': rgb(var(--ald-g-color-blue-50)),
+	'u-bg-success-light': rgb(var(--ald-g-color-green-50)),
+	'u-bg-warning-light': rgb(var(--ald-g-color-amber-50)),
+	'u-bg-danger-light': rgb(var(--ald-g-color-red-50)),
+	'u-bg-essentials': rgb(var(--ald-g-color-essentials), var(--ald-g-bg-transparency)),
+	'u-bg-professional': rgb(var(--ald-g-color-professional), var(--ald-g-bg-transparency)),
+	'u-bg-enterprise': rgb(var(--ald-g-color-enterprise), var(--ald-g-bg-transparency)),
+	'u-bg-aws': rgb(var(--ald-g-color-aws), var(--ald-g-bg-transparency)),
+	'u-bg-azure': rgb(var(--ald-g-color-azure), var(--ald-g-bg-transparency)),
+	'u-bg-datacenter': rgb(var(--ald-g-color-datacenter), var(--ald-g-bg-transparency)),
+	'u-bg-highlight': rgb(var(--ald-g-color-highlight), var(--ald-g-bg-transparency)),
+	'u-bg-default': rgb(var(--ald-g-color-background)),
+	'u-bg-transparent': transparent
+);
+
+@include utility-generator('background-color', $bg-color-props);
+
+$bg-color-hover-props: (
+	'u-bg-white': rgb(var(--ald-g-color-white), var(--ald-g-bg-transparency)),
+	'u-bg-gray-50': rgb(var(--ald-g-color-gray-50), var(--ald-g-bg-transparency)),
+	'u-bg-gray-100': rgb(var(--ald-g-color-gray-100), var(--ald-g-bg-transparency)),
+	'u-bg-gray-200': rgb(var(--ald-g-color-gray-200), var(--ald-g-bg-transparency)),
+	'u-bg-gray-300': rgb(var(--ald-g-color-gray-300), var(--ald-g-bg-transparency)),
+	'u-bg-gray-400': rgb(var(--ald-g-color-gray-400), var(--ald-g-bg-transparency)),
+	'u-bg-gray-500': rgb(var(--ald-g-color-gray-500), var(--ald-g-bg-transparency)),
+	'u-bg-gray-600': rgb(var(--ald-g-color-gray-600), var(--ald-g-bg-transparency)),
+	'u-bg-gray-700': rgb(var(--ald-g-color-gray-700), var(--ald-g-bg-transparency)),
+	'u-bg-gray-800': rgb(var(--ald-g-color-gray-800), var(--ald-g-bg-transparency)),
+	'u-bg-gray-900': rgb(var(--ald-g-color-gray-900), var(--ald-g-bg-transparency))
+);
+
+@include utility-generator('background-color', $bg-color-hover-props, $hover: true, $state-only: true);

@@ -1,0 +1,8 @@
+@use './../functions/if-important' as *;
+@use './../../1-config/sass-variables/font-sizes' as *;
+@use './../../1-config/sass-variables/line-heights' as *;
+
+@mixin font-size($label, $important: false) {
+	font-size: map-get($font-sizes, $label) if-important($important);
+	line-height: map-get($line-heights, $label) if-important($important);
+}

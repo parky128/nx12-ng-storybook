@@ -1,0 +1,56 @@
+@use './../../2-abstract/mixins/utility-generator' as *;
+
+/*
+* @section Top/Right/Bottom/Left
+* @description Positions an element to the top, left, right, or bottom of its container
+* @key layout.toprightbottomleft
+* @loop u-top-%, 0, 1, 2, 3, 4, 5
+* @loop u-right-%, 0, 1, 2, 3, 4, 5
+* @loop u-bottom-%, 0, 1, 2, 3, 4, 5
+* @loop u-left-%, 0, 1, 2, 3, 4, 5
+* @weight 4
+*/
+
+$top-props: (
+	'u-top-0': 0px,
+	'u-top-1': var(--ald-g-space-1),
+	'u-top-2': var(--ald-g-space-2),
+	'u-top-3': var(--ald-g-space-3),
+	'u-top-4': var(--ald-g-space-4),
+	'u-top-5': var(--ald-g-space-5)
+);
+
+@include utility-generator('top', $top-props);
+
+$right-props: (
+	'u-right-0': 0px,
+	'u-right-1': var(--ald-g-space-1),
+	'u-right-2': var(--ald-g-space-2),
+	'u-right-3': var(--ald-g-space-3),
+	'u-right-4': var(--ald-g-space-4),
+	'u-right-5': var(--ald-g-space-5)
+);
+
+@include utility-generator('right', $right-props);
+
+$bottom-props: (
+	'u-bottom-0': 0px,
+	'u-bottom-1': var(--ald-g-space-1),
+	'u-bottom-2': var(--ald-g-space-2),
+	'u-bottom-3': var(--ald-g-space-3),
+	'u-bottom-4': var(--ald-g-space-4),
+	'u-bottom-5': var(--ald-g-space-5)
+);
+
+@include utility-generator('bottom', $bottom-props);
+
+$left-props: (
+	'u-left-0': 0px,
+	'u-left-1': var(--ald-g-space-1),
+	'u-left-2': var(--ald-g-space-2),
+	'u-left-3': var(--ald-g-space-3),
+	'u-left-4': var(--ald-g-space-4),
+	'u-left-5': var(--ald-g-space-5)
+);
+
+@include utility-generator('left', $left-props);

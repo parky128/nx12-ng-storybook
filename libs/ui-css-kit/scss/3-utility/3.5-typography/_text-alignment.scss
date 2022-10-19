@@ -1,0 +1,17 @@
+@use './../../2-abstract/mixins/utility-generator' as *;
+
+/**
+* @section Text Alignment
+* @description Aligns the inner content of a block element
+* @key typography.alignment
+* @loop u-text-%, left, center, right
+*/
+
+ $text-align-props: (
+	'u-text-left': left,
+	'u-text-center': center,
+	'u-text-right': right
+);
+
+@include utility-generator('text-align', $text-align-props);
+

@@ -1,0 +1,148 @@
+import { Canvas, Meta, Story } from '@storybook/addon-docs';
+import { AldBadgeComponent } from './ald-badge.component';
+
+<Meta 
+    title="Components/Badge/Usage Guide" 
+    component={AldBadgeComponent}
+/>
+
+# Badge Usage Guide
+Badges add metadata or indicate status of items.
+
+## Basic Usage
+- `icon`: to show an icon or status
+- `label`: to display the tag, name, number or categorize items. 
+- `variant`: to show different colour and styled badge. [See Variant options below](#variants).
+
+See Examples: 
+- [Default Badge](?path=/story/components-badge--default)  
+- [Default Badge with Icon](?path=/story/components-badge--with-icon)  
+
+<Canvas>
+    <Story id="components-badge--default" height="50px"/>
+    <Story id="components-badge--with-icon" height="50px"/>
+</Canvas>
+
+## When to use
+- Use Badge in cases where content is mapped to multiple states, and the user needs a way to distinguish between them.
+- Highlighting a specific element or feature (e.g., something that is new or necessary).
+- To call attention to details in a way that makes it easy to scan.
+- To present information, such as status.
+
+## Do
+- Use established color patterns so that users can clearly identify the importance level.
+- It's important to position badges so that it's clear what object they belong to.
+- Keep badges short
+- Align the badge to the top of large accompanying text (anything larger than 16px). Center align for standard size text.
+
+### Don't
+- Use complex or verbose language. Use a single, scannable word instead. For example: 'New'.
+- Create a visual clutter by using pills in multiple places.
+
+## Variants
+`[variant]: string`
+
+| Variant                              	| Description                                                                                                                                                                                                                   	| Low Contrast Option 	|
+|--------------------------------------	|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	|---------------------	|
+| default                              	| Default badges present information without adding any emotion. They're useful when the information isn't so important to the user's main flow.                                                                                	| yes                 	|
+| info                                 	| Informational badges help to highlight some information as particularly important. They draw attention to the badge without stating whether it was positive or a potential problem.                                           	| yes                 	|
+| success                              	| Success badges help to highlight something desirable has happened or will happen. You can use them in situations like a confirmation of a user action.                                                                        	| yes                 	|
+| warning                              	| Warning badges highlight information that might have a negative impact on the user but isn't critical. They're associated with negative emotions so only use them occasionally to stop potential problems before they happen. 	| yes                 	|
+| danger                               	| Danger badges call attention to problems that require immediate attention from the user. These badges create feelings of stress so only use them for issues where they're truly necessary.                                    	| yes                 	|
+| datacenter, aws, azure               	| Platform badges are used to identify the platform of a deployment.                                                                                                                                                            	| no                  	|
+| essentials, professional, enterprise 	| Entitlement badges are used to identify assets with a given product entitlement.                                                                                                                                              	| no                  	|
+
+## Additional Options
+The following badge options are available:
+
+### Sizes
+`[size]: 'xs' | 'sm' | 'md'`
+
+The badge comes in 3 different sizes. The default size is the medium ("md").
+- xs
+- sm
+- md
+
+Input: `size="sm"`
+
+---
+
+### Low Contrast 
+`[lowContrast]: boolean`
+
+Low Contrast reduces the tone of the badge, where less emphasis is required, defaults to false.
+
+[Low Contrast Badge](?path=/story/components-badge--low-contrast)
+
+<Canvas>
+    <Story id="components-badge--low-contrast"/>
+</Canvas>
+
+---
+
+### Rounded
+`[rounded]: boolean`
+
+You can set the "rounded" input to true to make a rounded badge. Numeric badges should always have fully rounded corners.
+
+[Rounded Badge](?path=/story/components-badge--rounded)  
+
+<Canvas>
+    <Story id="components-badge--rounded"/>
+</Canvas>
+
+---
+
+### Icon Class
+`[iconClass]: IconClass`
+
+You can specify the icon class for the icon. By default it uses the ald-icon default; "material-icons".
+
+[Badge with al icon class](?path=/story/components-badge--with-icon)
+
+<Canvas>
+    <Story id="components-badge--with-icon"/>
+</Canvas>
+
+---
+
+### Actionable
+```[actionIcon]: string```
+
+Adding an action icon to the badge renders a button, making it an actionable badge, AKA; a "chip".
+
+`(didAction): EventEmitter<void>` will fire the event on button click. 
+
+[Badge with action button](?path=/story/components-badge--chip)
+
+<Canvas>
+    <Story id="components-badge--chip"/>
+</Canvas>
+
+---
+
+### Dropdown Action
+`[actionOptions]: AldOptionItem[]`
+
+In addition to the action icon, passing an array of options to the badge will render a dropdown menu instead of a button.
+
+`(didAction): EventEmitter<{option: AldOptionItem, index: number}>` will fire the event on dropdown menu item click, returning the selected item and index. 
+
+[Badge with dropdown actions](?path=/story/components-badge--chip-with-dropdown)
+
+<Canvas>
+    <Story id="components-badge--chip-with-dropdown" height="200px"/>
+</Canvas>
+
+---
+
+### Action Icon Class
+`[actionIconClass]: IconClass`
+
+Icon class for the action icon. Defaults to the default ald-icon class.
+
+---
+
+## Known issues
+
+- `ald-dropdown` used for the action dropdown menu does not work with the old ngcc `al-bottomsheet`. `ald-dropdown` uses the Material CDK Overlay to render the view to the DOM out of context of the where it is implemented.

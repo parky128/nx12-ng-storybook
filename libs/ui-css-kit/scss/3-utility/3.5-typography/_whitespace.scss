@@ -1,0 +1,19 @@
+@use './../../2-abstract/mixins/utility-generator' as *;
+
+/**
+* @section Whitespace
+* @description Controls how text is handled on the element it is applied to
+* @key typography.whitespace
+* @loop u-whitespace-%, normal, nowrap, pre, pre-line, pre-wrap
+*/
+
+$whitespace-props: (
+	'u-whitespace-normal': normal,
+	'u-whitespace-nowrap': nowrap,
+	'u-whitespace-pre': pre,
+	'u-whitespace-pre-line': pre-line,
+	'u-whitespace-pre-wrap': pre-wrap
+);
+
+@include utility-generator('white-space', $whitespace-props);
+

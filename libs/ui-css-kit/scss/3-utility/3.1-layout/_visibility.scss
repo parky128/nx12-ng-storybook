@@ -1,0 +1,16 @@
+@use './../../2-abstract/mixins/utility-generator' as *;
+
+/*
+* @section Visibility
+* @description Makes elements visible and hidden
+* @key layout.visibility
+* @loop u-%, visible, invisible
+* @weight 5
+*/
+
+$visibility-props: (
+	'u-visible': visible,
+	'u-invisible': hidden
+);
+
+@include utility-generator('visibility', $visibility-props);

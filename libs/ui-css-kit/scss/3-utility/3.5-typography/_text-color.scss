@@ -1,0 +1,37 @@
+@use './../../2-abstract/mixins/utility-generator' as *;
+
+/**
+* @section Text Color
+* @description Sets the color of text, text decorations and icons
+* @key typography.text-color
+* @loop u-text-%, inherit, primary, secondary, orange-500, info, danger, success, warning, threat-info, threat-low, threat-medium, threat-high, threat-critical, white, link, icon-primary, icon-secondary
+* @loop %, hover:u-text-orange-500
+*/
+
+$text-color-props: (
+	'u-text-inherit': inherit,
+	'u-text-primary': rgb(var(--ald-g-color-text-primary)),
+	'u-text-secondary': rgb(var(--ald-g-color-text-secondary)),
+	'u-text-orange-500': rgb(var(--ald-g-color-orange-500)),
+	'u-text-info': rgb(var(--ald-g-color-low-info-f)),
+	'u-text-danger': rgb(var(--ald-g-color-low-danger-f)),
+	'u-text-success': rgb(var(--ald-g-color-low-success-f)),
+	'u-text-warning': rgb(var(--ald-g-color-low-warning-f)),
+	'u-text-threat-info': rgb(var(--ald-g-color-threat-info)),
+	'u-text-threat-low': rgb(var(--ald-g-color-threat-low)),
+	'u-text-threat-medium': rgb(var(--ald-g-color-threat-medium)),
+	'u-text-threat-high': rgb(var(--ald-g-color-threat-high)),
+	'u-text-threat-critical': rgb(var(--ald-g-color-threat-critical)),
+	'u-text-white': rgb(var(--ald-g-color-white)),
+	'u-text-link': rgb(var(--ald-g-color-link)),
+	'u-text-icon-primary': rgb(var(--ald-g-color-icon-primary)),
+	'u-text-icon-secondary': rgb(var(--ald-g-color-icon-secondary))	
+);
+
+@include utility-generator('color', $text-color-props);
+
+$text-color-hover-props: (
+	'u-text-orange-500': rgb(var(--ald-g-color-orange-500))
+);
+
+@include utility-generator('color', $text-color-hover-props, $hover: true, $state-only: true);

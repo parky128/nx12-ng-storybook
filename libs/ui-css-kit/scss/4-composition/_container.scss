@@ -1,0 +1,40 @@
+@use './../1-config/sass-variables/breakpoints' as *;
+
+/**
+* @section Container
+* @weight 1
+* @key container
+* @tag compositional
+* @description Containers are needed to make the content more readable. The maximum width varies between the small (1024px) and largest (1536px) breakpoints. The container has padding and is centered.
+*/
+
+.c-container-sm {
+	/* @description 100% wide until small breakpoint */
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	max-width: map-get($breakpoints, "sm");
+}
+
+.c-container-md {
+	/* @description 100% wide until md breakpoint */
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	max-width: map-get($breakpoints, "md");
+}
+
+.c-container-lg {
+	/* @description 100% wide until lg breakpoint */
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	max-width: map-get($breakpoints, "lg");
+}
+
+.c-container-fluid {
+	/* @description Full width container, spanning the entire width of the viewport */
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}

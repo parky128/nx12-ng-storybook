@@ -1,0 +1,17 @@
+@use './../../2-abstract/mixins/utility-generator' as *;
+
+/**
+* @section Min-width
+* @weight 2
+* @key sizing.minimumwidth
+* @loop u-min-w-%, 0, 100%, auto
+* @description Sets the minimum width of an element
+*/
+
+$min-width-props: (
+	'u-min-w-0': var(--ald-g-space-0),
+	"u-min-w-100#{\%}": 100%,
+	"u-min-w-auto": "auto"
+);
+
+@include utility-generator('min-width', $min-width-props);

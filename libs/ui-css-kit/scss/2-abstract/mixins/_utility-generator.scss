@@ -1,0 +1,53 @@
+@use './../../1-config/sass-variables/separator' as *;
+@use './../../1-config/sass-variables/breakpoints' as *;
+
+@mixin utility-generator($prop, $map, $hover: false, $focus: false, $active: false, $responsive: false, $state-only: false) {
+
+	@if not ($state-only) {
+		@each $key, $val in $map {
+			.#{$key} {
+				#{$prop}: #{$val};
+			}
+		}
+	}
+
+
+	@if ($hover) {
+		@each $key, $val in $map {
+			.hover\:#{$key}:hover {
+				#{$prop}: #{$val};
+			}
+		}
+	}
+
+	@if ($focus) {
+		@each $key, $val in $map {
+			.focus\:#{$key}:focus-visible {
+				#{$prop}: #{$val};
+			}
+		}
+	}
+
+	@if ($active) {
+		@each $key, $val in $map {
+			.active\:#{$key}:active {
+				#{$prop}: #{$val};
+			}
+		}
+	}
+
+	@if ($responsive) {
+		@each $key, $val in $breakpoints {
+			@media screen and (min-width: #{$val}) {
+				.#{$key + $separator} {
+					@each $key, $val in $map {
+						&#{$key} {
+							#{$prop}: #{$val};
+						}
+					}
+				}
+			}
+		}
+	}
+
+}

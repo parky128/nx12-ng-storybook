@@ -1,0 +1,36 @@
+/**
+* @section Buttons
+* @weight 1
+* @key resetButtons
+* @tag compositional
+* @description Reset styles for button
+*/
+
+.c-reset-button {
+	border-width: 0;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+	cursor: pointer;
+
+	background-color: transparent;
+
+	/* inherit from ancestor */
+	color: inherit;
+	font: inherit;
+	line-height: inherit;
+
+	/* Corrects font smoothing for webkit */
+	-webkit-font-smoothing: inherit;
+	-moz-osx-font-smoothing: inherit;
+
+	border-radius: var(--ald-g-radius-sm);
+
+}
+
+.c-reset-button:focus-visible {
+	outline-width: 2px;
+	outline-style: solid;
+	outline-offset: 2px;
+	outline-color: var(--ald-g-color-focus);
+}

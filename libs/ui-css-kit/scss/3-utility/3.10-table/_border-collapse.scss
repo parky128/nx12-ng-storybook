@@ -1,0 +1,15 @@
+@use './../../2-abstract/mixins/utility-generator' as *;
+
+/**
+* @section Table border
+* @key table.border
+* @description Controls whether table borders should collapse or be separated
+* @loop u-border-%, collapse, separate
+*/
+
+$border-collapse-props: (
+	'u-border-collapse': collapse,
+	'u-border-separate': separate,
+);
+
+@include utility-generator('border-collapse', $border-collapse-props);

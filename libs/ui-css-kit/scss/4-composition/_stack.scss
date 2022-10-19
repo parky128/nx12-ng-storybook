@@ -1,0 +1,27 @@
+/*
+* @section Stack
+* @description Creates equal distance between components or a group of items
+* @key stack
+* @weight 1
+* @tag compositional
+*/
+
+@mixin stackDirection {
+	display: flex;
+	flex-direction: column;
+}
+
+.c-stack-sm {
+	@include stackDirection();
+	gap: var(--ald-g-space-2);
+}
+
+.c-stack-md {
+	@include stackDirection();
+	gap: var(--ald-g-space-4);
+}
+
+.c-stack-lg {
+	@include stackDirection();
+	gap: var(--ald-g-space-6);
+}

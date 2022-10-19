@@ -1,0 +1,41 @@
+<span
+    class="ald-badge"
+    [title]="title"
+    [ngClass]="[badgeStyles, sizeStyles, roundedStyles]"
+>
+    <ald-icon
+        *ngIf="icon"
+        [icon]="icon"
+        [iconClass]="iconClass"
+        size="sm"
+    ></ald-icon>
+
+    <span *ngIf="label" [ngClass]="{'u-pl-05 u-pr-1': icon }">
+        {{ label }}
+    </span>
+
+    <ng-container *ngIf="actionIcon">
+        <ng-container *ngIf="!actionOptions.length; else actionDropdown;">
+            <ald-button
+                size="xs"
+                variant="unstyled"
+                [icon]="actionIcon"
+                [iconClass]="actionIconClass"
+                (click)="didAction.emit()"
+            ></ald-button>
+        </ng-container>
+        <ng-template #actionDropdown>
+            <ald-dropdown
+                #dropdown
+                size="xs"
+                variant="unstyled"
+                [icon]="actionIcon"
+                [iconClass]="actionIconClass">
+                <ald-menu
+                    [options]="actionOptions"
+                    (didSelect)="didAction.emit($event); dropdown.close()">
+                </ald-menu>
+            </ald-dropdown>
+        </ng-template>
+    </ng-container>
+</span>

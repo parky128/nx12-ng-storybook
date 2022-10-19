@@ -1,0 +1,22 @@
+@use './../../2-abstract/mixins/utility-generator' as *;
+
+/**
+* @section Table
+* @title Table
+* @weight 10
+* @key table
+*/
+
+/**
+* @section Table layout
+* @key table.layout
+* @description Controls the table layout algorithm
+* @loop u-table-%, auto, fixed
+*/
+
+$table-layout-props: (
+	'u-table-auto': auto,
+	'u-table-fixed': fixed
+);
+
+@include utility-generator('table-layout', $table-layout-props);

@@ -1,0 +1,16 @@
+@use './../../2-abstract/mixins/utility-generator' as *;
+
+/**
+* @section Transitions
+* @key effects.transitions
+* @description Puts general transitions on elements
+* @loop u-%, transition, transition-in, transition-out
+*/
+
+$transition-props: (
+	'u-transition-in': all 250ms ease-in,
+	'u-transition-out':  all 250ms ease-out,
+	'u-transition': all 250ms linear
+);
+
+@include utility-generator('transition', $transition-props);

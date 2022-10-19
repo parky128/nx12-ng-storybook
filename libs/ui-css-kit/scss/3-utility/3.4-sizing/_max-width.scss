@@ -1,0 +1,16 @@
+@use './../../2-abstract/mixins/utility-generator' as *;
+
+/**
+* @section Max-width
+* @weight 3
+* @key sizing.maximumwidth
+* @loop u-max-w-%, 100%, auto
+* @description Sets the maximum width of an element
+*/
+
+$max-width-props: (
+	"u-max-w-100#{\%}": 100%,
+	"u-max-w-auto": "auto"
+);
+
+@include utility-generator('max-width', $max-width-props);

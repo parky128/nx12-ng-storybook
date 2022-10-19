@@ -1,0 +1,17 @@
+@use './../../2-abstract/mixins/utility-generator' as *;
+
+/**
+* @section Font Weight
+* @description Sets the weight of the font
+* @key typography.font-weight
+* @loop u-font-%, normal, medium, semibold, bold
+*/
+
+$weight-props: (
+	'u-font-normal': 400,
+	'u-font-medium': 500,
+	'u-font-semibold': 600,
+	'u-font-bold': 700
+);
+
+@include utility-generator('font-weight', $weight-props);

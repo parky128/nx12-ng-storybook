@@ -1,0 +1,31 @@
+@use './../../2-abstract/mixins/utility-generator' as *;
+
+/**
+* @section Color
+* @key border.color
+* @description Specifies several commonly-used border colors
+* @loop u-border-%, transparent, primary, secondary, gray-100, gray-200, gray-300, gray-400, gray-500, gray-600, gray-700, gray-800, gray-900, orange-500, info, success, warning, danger, white
+*/
+
+$border-color-props: (
+	'u-border-transparent': transparent,
+	'u-border-primary': rgb(var(--ald-g-color-border-primary)),
+	'u-border-secondary': rgb(var(--ald-g-color-border-secondary)),
+	'u-border-gray-100': rgb(var(--ald-g-color-gray-100)),
+	'u-border-gray-200': rgb(var(--ald-g-color-gray-200)),
+	'u-border-gray-300': rgb(var(--ald-g-color-gray-300)),
+	'u-border-gray-400': rgb(var(--ald-g-color-gray-400)),
+	'u-border-gray-500': rgb(var(--ald-g-color-gray-500)),
+	'u-border-gray-600': rgb(var(--ald-g-color-gray-600)),
+	'u-border-gray-700': rgb(var(--ald-g-color-gray-700)),
+	'u-border-gray-800': rgb(var(--ald-g-color-gray-800)),
+	'u-border-gray-900': rgb(var(--ald-g-color-gray-900)),
+	'u-border-orange-500': rgb(var(--ald-g-color-orange-500)),
+	'u-border-info': rgb(var(--ald-g-color-low-info-b)),
+	'u-border-success': rgb(var(--ald-g-color-low-success-b)),
+	'u-border-warning': rgb(var(--ald-g-color-low-warning-b)),
+	'u-border-danger': rgb(var(--ald-g-color-low-danger-b)),
+	'u-border-white':  rgb(var(--ald-g-color-white))
+);
+
+@include utility-generator('border-color', $border-color-props, $active:true);

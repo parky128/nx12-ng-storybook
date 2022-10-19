@@ -1,0 +1,58 @@
+@use './../2-abstract/mixins/font-size' as *;
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 500;
+}
+
+h1 {
+	@include font-size(xxxl);
+}
+
+h2 {
+	@include font-size(xxl);
+}
+
+h3 {
+	@include font-size(xl);
+}
+
+h4 {
+	@include font-size(lg);
+}
+
+h5 {
+	@include font-size(base);
+}
+
+h6, p {
+	@include font-size(sm);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+p {
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+// When a paragraph is followed by a heading
+h1, h2, h3, h4, h5, h6 {
+	+ p {
+		padding-top: var(--ald-g-space-2);
+	}
+}
+
+// When a paragraph is followed by another paragraph
+p + p {
+	padding-top: var(--ald-g-space-2);
+}
+
+// When a heading is followed by a paragraph
+p + {
+	h1, h2, h3, h4, h5, h6 {
+		padding-top: var(--ald-g-space-2);
+	}
+}

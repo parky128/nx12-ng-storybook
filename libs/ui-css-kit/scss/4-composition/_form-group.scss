@@ -1,0 +1,13 @@
+/**
+* @section Form group
+* @weight 1
+* @key formgroup
+* @tag compositional
+* @description Add some structure to your forms. To be used in form layouts.
+*/
+
+.c-form-group {
+	display: flex;
+	flex-direction: column;
+	gap: var(--ald-g-space-5);
+}

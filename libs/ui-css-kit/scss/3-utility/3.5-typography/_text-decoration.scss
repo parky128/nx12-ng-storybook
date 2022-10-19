@@ -1,0 +1,15 @@
+@use './../../2-abstract/mixins/utility-generator' as *;
+
+/**
+* @section Text Decoration
+* @description Adds or removes underline to selected text
+* @key typography.text-decoration
+* @loop u-%, underline, no-underline
+*/
+
+$decor-props: (
+	'u-underline': underline,
+	'u-no-underline': none
+);
+
+@include utility-generator('text-decoration-line', $decor-props, $hover: true);

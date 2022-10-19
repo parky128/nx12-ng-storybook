@@ -1,0 +1,20 @@
+@use './../../2-abstract/mixins/utility-generator' as *;
+
+/**
+* @section Background opacity
+* @description Controls an element's opacity of a background color
+* @key background.opacity
+* @loop u-bg-opacity-%, 0, 5, 10, 15, 20, 25
+*/
+
+ $bg-opacity-props: (
+	'u-bg-opacity-0':  0,
+	'u-bg-opacity-5':  0.05,
+	'u-bg-opacity-10': 0.1,
+	'u-bg-opacity-15': 0.15,
+	'u-bg-opacity-20': 0.2,
+	'u-bg-opacity-25': 0.25,
+	'u-bg-opacity-100': 1
+);
+
+@include utility-generator('--ald-g-bg-transparency', $bg-opacity-props, $hover: true);

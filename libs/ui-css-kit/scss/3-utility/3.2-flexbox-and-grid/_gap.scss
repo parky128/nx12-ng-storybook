@@ -1,0 +1,33 @@
+@use './../../2-abstract/mixins/utility-generator' as *;
+
+/**
+* @section Gap
+* @description Sets the gap between columns in grid layouts
+* @key flexgrid.gap
+* @weight 7
+* @virtual u-gap-1 Smallest possible gap (1)
+* @virtual u-gap-2 Gap level 2
+* @virtual u-gap-3 Gap level 3
+* @virtual u-gap-4 Gap level 4
+* @virtual u-gap-5 Gap level 5
+* @virtual u-gap-6 Gap level 6
+* @virtual u-gap-7 Gap level 7
+* @virtual u-gap-8 Gap level 8
+* @virtual u-gap-9 Gap level 9
+* @virtual u-gap-10 Maximum Gap (10)
+*/
+
+$gap-props: (
+	'u-gap-1': var(--ald-g-space-1),
+	'u-gap-2': var(--ald-g-space-2),
+	'u-gap-3': var(--ald-g-space-3),
+	'u-gap-4': var(--ald-g-space-4),
+	'u-gap-5': var(--ald-g-space-5),
+	'u-gap-6': var(--ald-g-space-6),
+	'u-gap-7': var(--ald-g-space-7),
+	'u-gap-8': var(--ald-g-space-8),
+	'u-gap-9': var(--ald-g-space-9),
+	'u-gap-10': var(--ald-g-space-10)
+);
+
+@include utility-generator('gap', $gap-props);

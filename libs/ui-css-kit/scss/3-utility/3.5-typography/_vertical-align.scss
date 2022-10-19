@@ -1,0 +1,22 @@
+@use './../../2-abstract/mixins/utility-generator' as *;
+
+/**
+* @section Vertical align
+* @description Controls vertical alignment of an inline or table-cell box.
+* @key typography.vertical-alignment
+* @loop u-align-%, baseline, top, middle, bottom, text-top, text-bottom, sub, super
+*/
+
+$valign-props: (
+	'u-align-baseline': baseline,
+	'u-align-top': top,
+	'u-align-middle': middle,
+	'u-align-bottom': bottom,
+	'u-align-text-top': text-top,
+	'u-align-text-bottom': text-bottom,
+	'u-align-sub': sub,
+	'u-align-super': super
+);
+
+@include utility-generator('vertical-align', $valign-props);
+

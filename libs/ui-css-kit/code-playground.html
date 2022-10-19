@@ -1,0 +1,108 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Code playground</title>
+  <meta name="description" content="">
+  <meta name="author" content="Marco Monteiro">
+  <link rel="icon" href="favicon.png">
+  <link rel="stylesheet" href="css/ui-css-kit.min.css">
+
+  <style>
+
+
+
+.box {
+    background-color: lightblue;
+}
+  </style>
+</head>
+
+<body>
+
+    <h1>Grid system</h1>
+
+    <div class="u-grid">
+        <div class="u-col-12 md:u-col-6 lg:u-col-3">
+            <div class="box">A</div>
+        </div>
+        <div class="u-col-12 md:u-col-6 lg:u-col-3">
+            <div class="box">B</div>
+        </div>
+        <div class="u-col-12 md:u-col-6 lg:u-col-3">
+            <div class="box">C</div>
+        </div>
+        <div class="u-col-12 md:u-col-6 lg:u-col-3">
+            <div class="box">D</div>
+        </div>
+    </div>
+    
+
+    <div class="u-grid u-grid-nogutter">
+        <div class="u-col">
+            <div class="box">1</div>
+        </div>
+        <div class="u-col u-grid-nogutter">
+            <div class="box">2</div>
+        </div>
+        <div class="u-col">
+            <div class="box">3</div>
+        </div>
+    </div>
+
+
+    <div class="u-grid">
+        <div class="u-col-4">
+            <div class="box">4</div>
+        </div>
+        <div class="u-col">
+             <div class="box">1</div>
+        </div>
+        <div class="u-col">
+             <div class="box">1</div>
+        </div>
+        <div class="u-col">
+             <div class="box">1</div>
+        </div>
+        <div class="u-col">
+             <div class="box">1</div>
+        </div>
+        <div class="u-col">
+             <div class="box">1</div>
+        </div>
+        <div class="u-col">
+             <div class="box">1</div>
+        </div>
+        <div class="u-col">
+             <div class="box">1</div>
+        </div>
+        <div class="u-col">
+             <div class="box">1</div>
+        </div>
+    </div>
+    
+    <div class="u-grid">
+        <div class="u-col-2">
+            <div class="box">2</div>
+        </div>
+        <div class="u-col-6">
+            <div class="box">6</div>
+        </div>
+        <div class="u-col-4">
+            <div class="box">4</div>
+        </div>
+    </div>
+
+    
+    <div class="u-grid">
+        <div class="u-col-fixed" style="width:100px"><div class="box">Fixed</div></div>
+        <div class="u-col"><div class="box">Auto</div></div>
+    </div>
+    
+    
+    
+
+</body>
+</html>

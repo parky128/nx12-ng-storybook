@@ -1,0 +1,35 @@
+@use './../../2-abstract/mixins/utility-generator' as *;
+
+/*
+* @section Overflow
+* @description Controls how overflow content is handled
+* @key layout.overflow
+* @loop u-overflow-%, auto, scroll, hidden
+* @loop u-overflow-x-%, auto, scroll, hidden
+* @loop u-overflow-y-%, auto, scroll, hidden
+* @weight 2
+*/
+
+$overflow-props: (
+	'u-overflow-auto': auto,
+	'u-overflow-scroll': scroll,
+	'u-overflow-hidden': hidden
+);
+
+@include utility-generator('overflow', $overflow-props);
+
+$overflow-x-props: (
+	'u-overflow-x-auto': auto,
+	'u-overflow-x-scroll': scroll,
+	'u-overflow-x-hidden': hidden
+);
+
+@include utility-generator('overflow-x', $overflow-x-props);
+
+$overflow-y-props: (
+	'u-overflow-y-auto': auto,
+	'u-overflow-y-scroll': scroll,
+	'u-overflow-y-hidden': hidden
+);
+
+@include utility-generator('overflow-y', $overflow-y-props);

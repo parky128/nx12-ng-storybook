@@ -1,0 +1,191 @@
+::ng-deep :root {
+    --ald-badge-default-bg: var(--ald-g-color-gray-mid-500);
+    --ald-badge-default-f: var(--ald-g-color-white);
+    --ald-badge-default-low-bg: var(--ald-g-color-gray-100);
+    --ald-badge-default-low-f: var(--ald-g-color-text-secondary);
+    --ald-badge-default-low-b: var(--ald-g-color-border-primary);
+
+    --ald-badge-info-bg: var(--ald-g-color-info-bg);
+    --ald-badge-info-f: var(--ald-g-color-info-f);
+    --ald-badge-info-low-bg: var(--ald-g-color-low-info-bg);
+    --ald-badge-info-low-f: var(--ald-g-color-low-info-f);
+    --ald-badge-info-low-b: var(--ald-g-color-low-info-b);
+
+    --ald-badge-success-bg: var(--ald-g-color-success-bg);
+    --ald-badge-success-f: var(--ald-g-color-success-f);
+    --ald-badge-success-low-bg: var(--ald-g-color-low-success-bg);
+    --ald-badge-success-low-f: var(--ald-g-color-low-success-f);
+    --ald-badge-success-low-b: var(--ald-g-color-low-success-b);
+
+    --ald-badge-warning-bg: var(--ald-g-color-warning-bg);
+    --ald-badge-warning-f: var(--ald-g-color-warning-f);
+    --ald-badge-warning-low-bg: var(--ald-g-color-low-warning-bg);
+    --ald-badge-warning-low-f: var(--ald-g-color-low-warning-f);
+    --ald-badge-warning-low-b: var(--ald-g-color-low-warning-b);
+
+    --ald-badge-danger-bg: var(--ald-g-color-danger-bg);
+    --ald-badge-danger-f: var(--ald-g-color-danger-f);
+    --ald-badge-danger-low-bg: var(--ald-g-color-low-danger-bg);
+    --ald-badge-danger-low-f: var(--ald-g-color-low-danger-f);
+    --ald-badge-danger-low-b: var(--ald-g-color-low-danger-b);
+}
+
+::ng-deep [data-color-theme='dark'] {
+    --ald-badge-default-low-bg: var(--ald-g-color-gray-700);
+    --ald-badge-default-low-f: var(--ald-g-color-white);
+    --ald-badge-default-low-b: var(--ald-g-color-gray-500);
+
+    --ald-badge-info-low-bg: var(--ald-g-color-dark-low-info-bg);
+    --ald-badge-info-low-f: var(--ald-g-color-dark-low-info-f);
+    --ald-badge-info-low-b: var(--ald-g-color-dark-low-info-b);
+
+    --ald-badge-success-low-bg: var(--ald-g-color-dark-low-success-bg);
+    --ald-badge-success-low-f: var(--ald-g-color-dark-low-success-f);
+    --ald-badge-success-low-b: var(--ald-g-color-dark-low-success-b);
+
+    --ald-badge-warning-low-bg: var(--ald-g-color-dark-low-warning-bg);
+    --ald-badge-warning-low-f: var(--ald-g-color-dark-low-warning-f);
+    --ald-badge-warning-low-b: var(--ald-g-color-dark-low-warning-b);
+
+    --ald-badge-danger-low-bg: var(--ald-g-color-dark-low-danger-bg);
+    --ald-badge-danger-low-f: var(--ald-g-color-dark-low-danger-f);
+    --ald-badge-danger-low-b: var(--ald-g-color-dark-low-danger-b);
+}
+
+.ald-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    white-space: nowrap;
+}
+
+.ald-badge--xs {
+    font-size: var(--ald-g-text-xxxs);
+    line-height: var(--ald-g-leading-xxxs);
+    padding: var(--ald-g-space-05) var(--ald-g-space-1);
+}
+
+.ald-badge--sm {
+    font-size: var(--ald-g-text-xxs);
+    line-height: var(--ald-g-leading-xxs);
+    padding: var(--ald-g-space-05) var(--ald-g-space-1);
+}
+
+.ald-badge--md {
+    font-size: var(--ald-g-text-xs);
+    line-height: var(--ald-g-leading-xs);
+    padding: var(--ald-g-space-05) var(--ald-g-space-2);
+}
+
+.ald-badge-icon--xs{
+    width: var(--ald-g-space-6);
+    height: var(--ald-g-space-6);
+}
+
+.ald-badge-icon--sm{
+    width: var(--ald-g-space-7);
+    height: var(--ald-g-space-7);
+}
+
+.ald-badge-icon--md{
+    width: var(--ald-g-space-8);
+    height: var(--ald-g-space-8);
+}
+
+/* Default */
+
+.ald-badge--default {
+    background-color: rgb(var(--ald-badge-default-bg));
+    color: rgb(var(--ald-badge-default-f));
+}
+
+.ald-badge--default-low {
+    background-color: rgb(var(--ald-badge-default-low-bg));
+    color: rgb(var(--ald-badge-default-low-f));
+    border-color: rgb(var(--ald-badge-default-low-b));
+}
+
+/* Info */
+
+.ald-badge--info {
+    background-color: rgb(var(--ald-badge-info-bg));
+    color: rgb(var(--ald-badge-info-f));
+}
+
+.ald-badge--info-low {
+    background-color: rgb(var(--ald-badge-info-low-bg));
+    color: rgb(var(--ald-badge-info-low-f));
+    border-color: rgb(var(--ald-badge-info-low-b));
+}
+
+/* Success */
+
+.ald-badge--success {
+    background-color: rgb(var(--ald-badge-success-bg));
+    color: rgb(var(--ald-badge-success-f));
+}
+
+.ald-badge--success-low {
+    background-color: rgb(var(--ald-badge-success-low-bg));
+    color: rgb(var(--ald-badge-success-low-f));
+    border-color: rgb(var(--ald-badge-success-low-b));
+}
+
+/* Warning */
+
+.ald-badge--warning {
+    background-color: rgb(var(--ald-badge-warning-bg));
+    color: rgb(var(--ald-badge-warning-f));
+}
+
+.ald-badge--warning-low {
+    background-color: rgb(var(--ald-badge-warning-low-bg));
+    color: rgb(var(--ald-badge-warning-low-f));
+    border-color: rgb(var(--ald-badge-warning-low-b));
+}
+
+/* Danger */
+
+.ald-badge--danger {
+    background-color: rgb(var(--ald-badge-danger-bg));
+    color: rgb(var(--ald-badge-danger-f));
+}
+
+.ald-badge--danger-low {
+    background-color: rgb(var(--ald-badge-danger-low-bg));
+    color: rgb(var(--ald-badge-danger-low-f));
+    border-color: rgb(var(--ald-badge-danger-low-b));
+}
+
+/* Entitlements */
+
+.ald-badge--essentials {
+    background-color: rgb(var(--ald-g-color-essentials));
+    color: white;
+}
+
+.ald-badge--professional {
+    background-color: rgb(var(--ald-g-color-professional));
+    color: white;
+}
+
+.ald-badge--enterprise {
+    background-color: rgb(var(--ald-g-color-enterprise));
+    color: white;
+}
+
+.ald-badge--aws {
+    background-color: rgb(var(--ald-g-color-aws));
+    color: white;
+}
+
+.ald-badge--azure {
+    background-color: rgb(var(--ald-g-color-azure));
+    color: white;
+}
+
+.ald-badge--datacenter {
+    background-color: rgb(var(--ald-g-color-datacenter));
+    color: white;
+}

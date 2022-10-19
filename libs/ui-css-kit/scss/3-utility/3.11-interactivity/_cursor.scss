@@ -1,0 +1,23 @@
+@use './../../2-abstract/mixins/utility-generator' as *;
+
+/**
+* @section Interactivity
+* @weight 11
+* @key interactivity
+*/
+
+/**
+* @section Cursor
+* @key interactivity.cursor
+* @description Controls what the mouse cursor will look like
+* @loop u-cursor-%, default, pointer, col-resize, not-allowed
+*/
+
+$cursor-props: (
+	'u-cursor-default': default,
+	'u-cursor-pointer': pointer,
+	'u-cursor-col-resize': col-resize,
+	'u-cursor-not-allowed': not-allowed
+);
+
+@include utility-generator('cursor', $cursor-props);

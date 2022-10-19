@@ -1,0 +1,18 @@
+/**
+* @section Word Break
+* @description Controls word breaks in an element
+* @key typography.word-break
+*/
+
+.u-break-normal {
+	overflow-wrap: normal;
+	word-break: normal;
+}
+
+.u-break-words {
+	overflow-wrap: break-word;
+}
+
+.u-break-all {
+	word-break: break-all;
+}

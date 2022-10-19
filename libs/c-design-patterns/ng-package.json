@@ -1,0 +1,9 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/libs/c-design-patterns",
+  "lib": {
+    "cssUrl"      : "inline",
+    "entryFile"   : "src/index.ts",
+    "styleIncludePaths": [ "../../.aliases" ]
+  }
+}

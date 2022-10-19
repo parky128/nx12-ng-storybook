@@ -1,0 +1,29 @@
+@use './../../2-abstract/mixins/utility-generator' as *;
+
+/**
+* @section Layout
+* @title Layout
+* @key layout
+* @weight 1
+*/
+
+/*
+* @section Display
+* @description Specifies the display behavior
+* @key layout.display
+* @loop u-%, hidden, block, flex, inline-flex, list-item
+* @loop %, sm:u-hidden, sm:u-block, sm:u-flex, sm:u-inline-flex, sm:u-list-item
+* @loop %, md:u-hidden, md:u-block, md:u-flex, md:u-inline-flex, md:u-list-item
+* @loop %, lg:u-hidden, lg:u-block, lg:u-flex, lg:u-inline-flex, lg:u-list-item
+*  @weight 1
+*/
+
+$display-props: (
+	'u-hidden': none,
+	'u-block': block,
+	'u-flex': flex,
+	'u-inline-flex': inline-flex,
+	'u-list-item': list-item
+);
+
+@include utility-generator('display', $display-props, $responsive:true);

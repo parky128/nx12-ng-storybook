@@ -1,0 +1,38 @@
+/**
+* @section Border Radius
+* @key border.radius
+* @description Specifies border radius for an element
+* @loop u-rounded-%, sm, md, lg, tl-sm, tl-md, tl-lg, tr-sm, tr-md, tr-lg, full
+*/
+
+$border-radius-properties: (
+	"u-rounded": "border-radius"
+) !default;
+
+$border-radius-directions: (
+	"u-rounded": "border-radius",
+	"u-rounded-tr": "border-top-right-radius",
+	"u-rounded-br": "border-bottom-right-radius",
+	"u-rounded-bl": "border-bottom-left-radius",
+	"u-rounded-tl": "border-top-left-radius",
+) !default;
+
+$border-radius-values: (
+	"-sm": var(--ald-g-radius-sm),
+	"-md": var(--ald-g-radius-md),
+	"-lg": var(--ald-g-radius-lg)
+) !default;
+
+@each $direction-namespace, $direction-rules in $border-radius-directions {
+	@each $value-namespace, $value in $border-radius-values {
+		.#{$direction-namespace}#{$value-namespace} {
+			@each $direction in $direction-rules {
+				#{$direction}: $value;
+			}
+		}
+	}
+}
+
+.u-rounded-full {
+	border-radius: var(--ald-g-radius-full);
+}

@@ -1,0 +1,180 @@
+/**
+* @section Spacing
+* @title Spacing
+* @key spacing
+* @description Fine-tune your layout with spacing utilities. Our spacing system based on a 4px unit. 
+* @weight 3
+*/
+
+/**
+* @section Margin
+* @weight 1
+* @key spacing.margin
+* @description Controls an element's margin.
+* @loop u-m-%, 05, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
+*/
+
+/**
+* @section Margin top
+* @weight 2
+* @key spacing.margin.top
+* @loop u-mt-%, 05, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
+*/
+
+/**
+* @section Margin right
+* @weight 3
+* @key spacing.margin.right
+* @loop u-mr-%, 05, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, auto
+*/
+
+/**
+* @section Margin bottom
+* @weight 4
+* @key spacing.margin.bottom
+* @loop u-mb-%, 05, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
+*/
+
+/**
+* @section Margin left
+* @weight 5
+* @key spacing.margin.left
+* @loop u-ml-%, 05, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, auto
+*/
+
+/**
+* @section Horizontal margin
+* @weight 6
+* @key spacing.margin.x
+* @loop u-mx-%, 05, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, auto
+*/
+
+/**
+* @section Vertical margin
+* @weight 7
+* @key spacing.margin.y
+* @loop u-my-%, 05, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
+*/
+
+/**
+* @section Padding
+* @weight 2
+* @key spacing.padding
+* @description Controls an element's padding.
+* @loop u-p-%, 05, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
+*/
+
+/**
+* @section Padding top
+* @weight 2
+* @key spacing.padding.top
+* @loop u-pt-%, 05, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
+*/
+
+/**
+* @section Padding right
+* @weight 3
+* @key spacing.padding.right
+* @loop u-pr-%, 05, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
+*/
+
+/**
+* @section Padding bottom
+* @weight 4
+* @key spacing.padding.bottom
+* @loop u-pb-%, 05, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
+*/
+
+/**
+* @section Padding left
+* @weight 5
+* @key spacing.padding.left
+* @loop u-pl-%, 05, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
+*/
+
+/**
+* @section Horizontal padding
+* @weight 6
+* @key spacing.padding.x
+* @loop u-px-%, 05, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
+*/
+
+/**
+* @section Vertical padding
+* @weight 7
+* @key spacing.padding.y
+* @loop u-py-%, 05, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
+*/
+
+$spacing-directions: (
+	null: null,
+	"t": "-top",
+	"r": "-right",
+	"b": "-bottom",
+	"l": "-left",
+	"x": "-left" "-right",
+	"y": "-top" "-bottom",
+) !default;
+
+$spacing-properties: (
+	"u-p": "padding",
+	"u-m": "margin",
+) !default;
+
+$spacing-sizes: (
+	"-0":      0px,
+	"-05":     var(--ald-g-space-05),
+	"-1":      var(--ald-g-space-1),
+	"-2":      var(--ald-g-space-2),
+	"-3":      var(--ald-g-space-3),
+	"-4":      var(--ald-g-space-4),
+	"-5":      var(--ald-g-space-5),
+	"-6":      var(--ald-g-space-6),
+	"-7":      var(--ald-g-space-7),
+	"-8":      var(--ald-g-space-8),
+	"-9":      var(--ald-g-space-9),
+	"-10":     var(--ald-g-space-10),
+	"-11":     var(--ald-g-space-11),
+	"-12":     var(--ald-g-space-12),
+	"-13":     var(--ald-g-space-13),
+	"-14":     var(--ald-g-space-14),
+	"-15":     var(--ald-g-space-15),
+	"-16":     var(--ald-g-space-16),
+	"-17":     var(--ald-g-space-17),
+	"-18":     var(--ald-g-space-18),
+	"-19":     var(--ald-g-space-19),
+	"-20":     var(--ald-g-space-20),
+	"-30":     var(--ald-g-space-30),
+	"-40":     var(--ald-g-space-40),
+	"-50":     var(--ald-g-space-50),
+	"-60":     var(--ald-g-space-60),
+	"-70":     var(--ald-g-space-70),
+	"-80":     var(--ald-g-space-80),
+	"-90":     var(--ald-g-space-90),
+	"-100":    var(--ald-g-space-100)
+) !default;
+
+@each $property-namespace, $property in $spacing-properties {
+	@each $direction-namespace, $direction-rules in $spacing-directions {
+		@each $size-namespace, $size in $spacing-sizes {
+			.#{$property-namespace}#{$direction-namespace}#{$size-namespace} {
+				@each $direction in $direction-rules {
+					#{$property}#{$direction}: $size;
+				}
+			}
+		}
+	}
+}
+
+.u-mx-auto {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.u-ml-auto {
+	margin-left: auto;
+}
+
+.u-mr-auto {
+	margin-right: auto;
+}

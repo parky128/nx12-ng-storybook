@@ -1,0 +1,94 @@
+/**
+* @section Border
+* @key border
+* @weight 8
+* @description Utilities for applying common border styles, colors, widths, and radii.
+*/
+
+/*
+* @section Width
+* @key border.width
+* @description Specifies several commonly used border widths
+*/
+.u-border {
+	/* @description Applies a uniform 1px border around the entire element */
+	border-width: 1px;
+}
+
+.u-border-x {
+	/* @description Applies a 1px border to the left and right sides of an element simultaneously */
+	border-width: 0px;
+	border-left-width: 1px;
+	border-right-width: 1px;
+}
+
+.u-border-y {
+	/* @description Applies a 1px border to the top and bottom sides of an element simultaneously */
+	border-width: 0px;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+}
+
+.u-border-0 {
+	/* @description Removes border around the entire element */
+	border-width: 0px;
+}
+
+.u-border-2 {
+	/* @description Applies a uniform 2px border around the entire element */
+	border-width: 2px;
+}
+
+.u-border-t {
+	/* @description Applies a 1px border to the top of the element only */
+	border-width: 0px;
+	border-top-width: 1px;
+}
+
+.u-border-t-2 {
+	/* @description Applies a 2px border to the top of the element only */
+	border-width: 0px;
+	border-top-width: 2px;
+}
+
+.u-border-r {
+	/* @description Applies a 1px border to the right side of the element only */
+	border-width: 0px;
+	border-right-width: 1px;
+}
+
+.u-border-r-2 {
+	/* @description Applies a 2px border to the right side of the element only */
+	border-width: 0px;
+	border-right-width: 2px;
+}
+
+.u-border-b {
+	/* @description Applies a 1px border to the bottom of the element only */
+	border-width: 0px;
+	border-bottom-width: 1px;
+}
+
+.u-border-b-2 {
+	/* @description Applies a 2px border to the bottom of the element only */
+	border-width: 0px;
+	border-bottom-width: 2px;
+}
+
+.u-border-b-3 {
+	/* @description Applies a 2px border to the bottom of the element only */
+	border-width: 0px;
+	border-bottom-width: 3px;
+}
+
+.u-border-l {
+	/* @description Applies a 1px border to the left side of the element only */
+	border-width: 0px;
+	border-left-width: 1px;
+}
+
+.u-border-l-2 {
+	/* @description Applies a 2px border to the left side of the element only */
+	border-width: 0px;
+	border-left-width: 2px;
+}

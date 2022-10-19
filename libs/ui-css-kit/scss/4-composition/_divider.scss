@@ -1,0 +1,16 @@
+/**
+* @section Divider
+* @weight 1
+* @key divider
+* @tag compositional
+* @description Content is divided into clear groups by dividers. To be applied only to <hr> (horizontal rules)
+*/
+
+.c-divider {
+	display: block;
+	width: 100%;
+	margin-top: 0;
+	margin-bottom: 0;
+	border: 0;
+	border-top: 1px solid rgb(var(--ald-g-color-border-primary));
+}

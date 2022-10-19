@@ -1,0 +1,42 @@
+@use './../../2-abstract/mixins/utility-generator' as *;
+
+/**
+* @section Effects
+* @title Effects
+* @weight 9
+* @key effects
+*/
+
+/**
+* @section Opacity
+* @key effects.opacity
+* @description Specifies how transparent an element is
+* @loop u-opacity-%, 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100
+*/
+
+
+$opacity-props: (
+	'u-opacity-0':  0,
+	'u-opacity-5':  0.05,
+	'u-opacity-10': 0.1,
+	'u-opacity-15': 0.15,
+	'u-opacity-20': 0.2,
+	'u-opacity-25': 0.25,
+	'u-opacity-30': 0.3,
+	'u-opacity-35': 0.35,
+	'u-opacity-40': 0.4,
+	'u-opacity-45': 0.45,
+	'u-opacity-50': 0.5,
+	'u-opacity-55': 0.55,
+	'u-opacity-60': 0.6,
+	'u-opacity-65': 0.65,
+	'u-opacity-70': 0.7,
+	'u-opacity-75': 0.75,
+	'u-opacity-80': 0.8,
+	'u-opacity-85': 0.85,
+	'u-opacity-90': 0.9,
+	'u-opacity-95': 0.95,
+	'u-opacity-100': 1
+);
+
+@include utility-generator('opacity', $opacity-props, $hover: true);

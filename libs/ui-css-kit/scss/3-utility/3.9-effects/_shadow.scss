@@ -1,0 +1,66 @@
+/**
+* @section Shadow
+* @key effects.shadow
+* @description Puts shadows on elements
+*/
+
+ .u-shadow-sm {
+	/* @description Elements which are a part of the layout, for example cards.*/
+	box-shadow: var(--ald-g-shadow-sm);
+}
+
+.u-shadow-md {
+	/* @description Floating elements that are connected to a layout item. E.g. popover (Select, Dropdown, etc.), floating panels (Date-time picker), Tooltips, etc.*/
+	box-shadow: var(--ald-g-shadow-md);
+}
+
+.u-shadow-lg {
+	/* @description Floating elements that are fully detached from the layout E.g. Modals, Snack Bars, floating Notifications, etc.*/
+	box-shadow: var(--ald-g-shadow-lg);
+}
+
+
+/*
+* @section Shadow border
+* @key effects.shadow.border
+* @weight 1
+*/
+
+.u-shadow-border {
+	--u-border-s-width: 1px;
+	box-shadow: inset 0px 0px 0px var(--u-border-s-width) var(--u-border-s-color);
+}
+
+.u-shadow-border-2 {
+	--u-border-s-width: 2px;
+	box-shadow: inset 0px 0px 0px var(--u-border-s-width) var(--u-border-s-color);
+}
+
+/*
+* @section Shadow style
+* @key effects.shadow.style
+* @weight 2
+*/
+
+.u-shadow-border-outset {
+	--u-border-s-width: 1px;
+	box-shadow: 0px 0px 0px var(--u-border-s-width) var(--u-border-s-color);
+}
+
+/*
+* @section Shadow color
+* @key effects.shadow.border.color
+* @weight 3
+*/
+
+.u-shadow-border-primary {
+	--u-border-s-color: rgb(var(--ald-g-color-border-primary));
+}
+
+.u-shadow-border-error {
+	--u-border-s-color: rgb(var(--ald-g-color-border-danger));
+}
+
+.u-shadow-border-highlight {
+	--u-border-s-color: rgb(var(--ald-g-color-highlight));
+}

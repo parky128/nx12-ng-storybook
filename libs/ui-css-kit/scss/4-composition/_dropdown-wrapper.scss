@@ -1,0 +1,19 @@
+/**
+* @section Dropdown wrapper
+* @weight 1
+* @key dropdown-wrapper
+* @tag compositional
+*/
+
+.c-dropdown-wrapper {
+	position: absolute;
+    top:0;
+    left: 0;
+    border-bottom-right-radius: var(--ald-g-radius-sm);
+    border-bottom-left-radius: var(--ald-g-radius-sm);
+    box-shadow: var(--ald-g-shadow-md);
+    border:1px solid rgb(var(--ald-g-color-border-secondary));
+    background-color: white;
+    width: max-content;
+    z-index: 5;
+}

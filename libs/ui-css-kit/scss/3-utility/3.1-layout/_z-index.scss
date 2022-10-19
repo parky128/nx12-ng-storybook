@@ -1,0 +1,23 @@
+@use './../../2-abstract/mixins/utility-generator' as *;
+
+/*
+* @section Z Index
+* @description Sets the z-order of a positioned element and its descendants
+* @key layout.zindex
+* @loop -u-z-%, 1
+* @loop u-z-%, 1, 2, 3, 4, 5, max
+* @weight 6
+*/
+
+$z-props: (
+	'-u-z-1': -1,
+	'u-z-0': 0,
+	'u-z-1': 1,
+	'u-z-2': 2,
+	'u-z-3': 3,
+	'u-z-4': 4,
+	'u-z-5': 5,
+	'u-z-max': 9999
+);
+
+@include utility-generator('z-index', $z-props);

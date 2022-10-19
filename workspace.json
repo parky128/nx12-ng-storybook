@@ -1,0 +1,210 @@
+{
+  "version": 2,
+  "projects": {
+    "c-design-patterns": {
+      "projectType": "library",
+      "root": "libs/c-design-patterns",
+      "sourceRoot": "libs/c-design-patterns/src",
+      "prefix": "al",
+      "architect": {
+          "base-build": {
+              "builder": "@nrwl/angular:package",
+              "outputs": ["dist/libs/c-design-patterns"],
+              "options": {
+                  "project": "libs/c-design-patterns/ng-package.json"
+              },
+              "configurations": {
+                  "production": {
+                      "tsConfig": "libs/c-design-patterns/tsconfig.lib.prod.json"
+                  },
+                  "development": {
+                      "tsConfig": "libs/c-design-patterns/tsconfig.lib.json"
+                  }
+              },
+              "defaultConfiguration": "production"
+          },
+          "test": {
+              "builder": "@nrwl/jest:jest",
+              "outputs": ["coverage/libs/c-design-patterns"],
+              "options": {
+                  "jestConfig": "libs/c-design-patterns/jest.config.js",
+                  "passWithNoTests": true
+              }
+          },
+          "lint": {
+              "builder": "@nrwl/linter:eslint",
+              "options": {
+                  "lintFilePatterns": [
+                      "libs/c-design-patterns/src/**/*.ts",
+                      "libs/c-design-patterns/src/**/*.html"
+                  ]
+              },
+              "configurations": {
+                  "ci": {
+                      "format": "json",
+                      "outputFile": "reports/eslint/c-design-patterns.json"
+                  },
+                  "development": {
+                      "format": "html",
+                      "outputFile": "reports/eslint/c-design-patterns.html"
+                  },
+                  "defaultConfiguration": "development"
+              }
+          },
+          "run-storybook": {
+              "builder": "@nrwl/storybook:storybook",
+              "options": {
+                  "uiFramework": "@storybook/angular",
+                  "port": 4400,
+                  "config": {
+                      "configFolder": "libs/c-design-patterns/.storybook"
+                  },
+                  "parallel": false
+              },
+              "configurations": {
+                  "ci": {
+                      "quiet": true
+                  }
+              }
+          },
+          "storybook": {
+              "builder": "@nrwl/workspace:run-commands",
+              "options": {
+                  "commands": [
+                      {
+                          "command": "nx storybook-compodoc c-design-patterns",
+                          "forwardAllArgs": false
+                      },
+                      {
+                          "command": "nx run-storybook c-design-patterns",
+                          "forwardAllArgs": false
+                      }
+                  ],
+                  "parallel": false
+              }
+          },
+          "storybook-compodoc": {
+              "builder": "@nrwl/workspace:run-commands",
+              "options": {
+                  "commands": [
+                      {
+                          "command": "npx compodoc -p ./libs/c-design-patterns/tsconfig.json -e json -d libs/c-design-patterns",
+                          "forwardAllArgs": false
+                      }
+                  ],
+                  "parallel": false
+              }
+          },
+          "generate-storybook-static-site": {
+              "builder": "@nrwl/workspace:run-commands",
+              "options": {
+                  "commands": [
+                      {
+                          "command": "nx storybook-compodoc c-design-patterns",
+                          "forwardAllArgs": false
+                      },
+                      {
+                          "command": "nx build-storybook-static-site c-design-patterns",
+                          "forwardAllArgs": false
+                      }
+                  ],
+                  "parallel": false
+              }
+          },
+          "build-storybook-static-site": {
+              "builder": "@nrwl/storybook:build",
+              "outputs": ["{options.outputPath}"],
+              "options": {
+                  "uiFramework": "@storybook/angular",
+                  "outputPath": "dist/storybook/c-design-patterns",
+                  "styles": ["libs/c-design-patterns/src/styles/global.scss"],
+                  "config": {
+                      "configFolder": "libs/c-design-patterns/.storybook"
+                  }
+              },
+              "configurations": {
+                  "ci": {
+                      "quiet": true
+                  }
+              }
+          },
+          "build": {
+              "builder": "@nrwl/workspace:run-commands",
+              "options": {
+                  "commands": [
+                      {
+                          "command": "nx base-build c-design-patterns",
+                          "forwardAllArgs": false
+                      },
+                      {
+                          "command": "npx scss-bundle -c ./libs/c-design-patterns/bundle.config.json --logLevel error",
+                          "forwardAllArgs": false
+                      },
+                      {
+                          "command": "copyfiles -f './libs/c-design-patterns/src/lib/**/*.scss' ./dist/libs/c-design-patterns/styles ",
+                          "forwardAllArgs": false
+                      },
+                      {
+                          "command": "cp LICENSE ./dist/libs/c-design-patterns/",
+                          "forwardAllArgs": false
+                      }
+                  ],
+                  "parallel": false,
+                  "tsConfig": "tsconfig.base.json"
+              }
+          }
+      }
+    },
+    "ui-css-kit": {
+      "projectType": "library",
+      "root": "libs/ui-css-kit",
+      "sourceRoot": "libs/ui-css-kit",
+      "prefix": "al",
+      "architect": {
+          "build": {
+              "builder": "@nrwl/workspace:run-commands",
+              "options": {
+                  "commands": [
+                      {
+                          "command": "npx sass --load-path=node_modules/modern-normalize ./libs/ui-css-kit/scss/index.scss ./libs/ui-css-kit/css/ui-css-kit.css",
+                          "forwardAllArgs": false
+                      },
+                      {
+                          "command": "npx postcss ./libs/ui-css-kit/css/ui-css-kit.css -o ./libs/ui-css-kit/css/ui-css-kit.min.css --config ./libs/ui-css-kit/postcss.config.js --verbose --no-map ---compressed",
+                          "forwardAllArgs": false
+                      },
+                      {
+                          "command": "mkdir -p ./dist/libs",
+                          "forwardAllArgs": false
+                      },
+                      {
+                          "command": "cp -R ./libs/ui-css-kit ./dist/libs",
+                          "forwardAllArgs": false
+                      }
+                  ],
+                  "parallel": false
+              }
+          }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nxext/stencil"
+  },
+  "generators": {
+    "@nrwl/angular:application": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest"
+    },
+    "@nrwl/angular:component": {
+      "style": "scss"
+    }
+  }
+}

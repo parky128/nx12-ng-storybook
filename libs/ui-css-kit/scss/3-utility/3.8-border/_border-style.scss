@@ -1,0 +1,15 @@
+@use './../../2-abstract/mixins/utility-generator' as *;
+
+/**
+* @section Style
+* @key border.style
+* @description Specifies border style (present or absent)
+* @loop u-border-%, solid, none
+*/
+
+$border-style-props: (
+	'u-border-solid': solid,
+	'u-border-none': none
+);
+
+@include utility-generator('border-style', $border-style-props);

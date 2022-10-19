@@ -1,0 +1,10 @@
+{
+  "bundlerOptions": {
+    "entryFile": "./libs/c-design-patterns/src/styles/global.scss",
+    "outFile": "./dist/libs/c-design-patterns/styles/global.scss",
+    "includePaths": [
+        ".aliases",
+        ".node_modules"
+    ]
+  }
+}

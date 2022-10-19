@@ -1,0 +1,52 @@
+@use './../../2-abstract/mixins/utility-generator' as *;
+
+/**
+* @section Sizing
+* @title Sizing
+* @weight 4
+* @key sizing
+*/
+
+/**
+* @section Height
+* @key sizing.height
+* @description Sets the height of the element’s content area.
+* @weight 4
+* @loop u-h-%, 0.5, 1, 1.5, 2, 2.5, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 30, 40, 50, 60, 70, 80, 90, 100, 100%, auto, screen
+*/
+
+$height-props: (
+	"u-h-1":var(--ald-g-space-1),
+	"u-h-2":var(--ald-g-space-2),
+	"u-h-3":var(--ald-g-space-3),
+	"u-h-4":var(--ald-g-space-4),
+	"u-h-5":var(--ald-g-space-5),
+	"u-h-6":var(--ald-g-space-6),
+	"u-h-7":var(--ald-g-space-7),
+	"u-h-8":var(--ald-g-space-8),
+	"u-h-9":var(--ald-g-space-9),
+	"u-h-10":var(--ald-g-space-10),
+	"u-h-11":var(--ald-g-space-11),
+	"u-h-12":var(--ald-g-space-12),
+	"u-h-13":var(--ald-g-space-13),
+	"u-h-14":var(--ald-g-space-14),
+	"u-h-15":var(--ald-g-space-15),
+	"u-h-16":var(--ald-g-space-16),
+	"u-h-17":var(--ald-g-space-17),
+	"u-h-18":var(--ald-g-space-18),
+	"u-h-19":var(--ald-g-space-19),
+	"u-h-20":var(--ald-g-space-20),
+	"u-h-30":var(--ald-g-space-30),
+	"u-h-40":var(--ald-g-space-40),
+	"u-h-50":var(--ald-g-space-50),
+	"u-h-60":var(--ald-g-space-60),
+	"u-h-70":var(--ald-g-space-70),
+	"u-h-80":var(--ald-g-space-80),
+	"u-h-90":var(--ald-g-space-90),
+	"u-h-100":var(--ald-g-space-100),
+	"u-h-100#{\%}": 100%,
+	"u-h-auto": auto,
+	"u-h-screen": 100vh
+);
+
+@include utility-generator('height', $height-props);

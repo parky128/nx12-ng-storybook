@@ -1,0 +1,20 @@
+@use './../../2-abstract/mixins/utility-generator' as *;
+
+/**
+* @section Order
+* @description Sets the order of an item in a flex or grid container
+* @key flexgrid.order
+* @weight 8
+* @loop u-order-%, none, 1, 2, 3, 4, 5
+*/
+
+ $order-props: (
+    'u-order-none': 0,
+    'u-order-1': 1,
+    'u-order-2': 2,
+    'u-order-3': 3,
+    'u-order-4': 4,
+    'u-order-5': 5
+);
+
+@include utility-generator('order', $order-props, $responsive:true);

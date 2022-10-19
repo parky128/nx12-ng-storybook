@@ -1,0 +1,18 @@
+@use './../../2-abstract/mixins/utility-generator' as *;
+
+/*
+* @section Position
+* @description Controls positioning in container elements
+* @key layout.position
+* @loop u-%, relative, absolute, fixed, sticky
+* @weight 3
+*/
+
+$position-props: (
+	'u-relative': relative,
+	'u-absolute': absolute,
+	'u-fixed': fixed,
+	'u-sticky': sticky
+);
+
+@include utility-generator('position', $position-props);

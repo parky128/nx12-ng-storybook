@@ -1,0 +1,5 @@
+// helper function to avoid repetition
+
+@function if-important($important){
+	@return #{if($important, '!important', '')};
+}

@@ -1,0 +1,13 @@
+/**
+* @section System font stack
+* @description Use to rely solely on the fonts that come natively with the operating system
+* @key typography.font-stack
+*/
+
+.u-font-system {
+	font-family: var(--ald-g-font-stack);
+}
+
+.u-font-mono {
+	font-family: Courier, Monaco, monospace;
+}

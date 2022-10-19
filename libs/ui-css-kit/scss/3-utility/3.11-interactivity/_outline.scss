@@ -1,0 +1,67 @@
+@use './../../2-abstract/mixins/utility-generator' as *;
+
+/**
+* @section Outline
+* @key interactivity.outline
+* @description Draws a line around the outside of an element
+*/
+
+/*
+* @section Outline width
+* @key interactivity.outline.width
+* @weight 1
+* @loop u-%, outline, outline-none, outline-2
+*/
+
+ $outline-width-props: (
+	'u-outline-none': 0px,
+	'u-outline': 1px,
+	'u-outline-2': 2px
+);
+
+@include utility-generator('outline-width', $outline-width-props, $focus: true);
+
+/*
+* @section Outline style
+* @key interactivity.outline.style
+* @weight 2
+*/
+
+$outline-style-props: (
+	'u-outline': solid
+);
+
+@include utility-generator('outline-style', $outline-style-props, $focus: true);
+
+/*
+* @section Outline color
+* @key interactivity.outline.color
+* @weight 4
+* @loop u-outline-%, gray-light, gray, focus, focus-inverse, danger, link
+*/
+
+$outline-color-props: (
+	'u-outline-gray-light': rgb(var(--ald-g-color-gray-200)),
+	'u-outline-gray': rgb(var(--ald-g-color-gray-300)),
+	'u-outline-focus': rgb(var(--ald-g-color-focus)),
+	'u-outline-focus-inverse': rgb(var(--ald-g-color-focus-inverse)),
+	'u-outline-danger': rgb(var(--ald-g-color-danger-b)),
+	'u-outline-link': rgb(var(--ald-g-color-link))
+);
+
+@include utility-generator('outline-color', $outline-color-props, $focus: true);
+
+/*
+* @section Outline offset
+* @key interactivity.outline.offset
+* @weight 5
+* @loop u-outline-%, offset-none, offset, offset-2
+*/
+
+$outline-offset-props: (
+	'u-outline-offset-none': 0,
+	'u-outline-offset': 1px,
+	'u-outline-offset-2': 2px,
+);
+
+@include utility-generator('outline-offset', $outline-offset-props, $focus: true);

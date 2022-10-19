@@ -1,0 +1,17 @@
+@use './../../2-abstract/mixins/utility-generator' as *;
+
+/**
+* @section Lists
+* @description Groups a set of related items in lists
+* @key typography.lists
+* @loop u-list-%, none, disc, decimal
+*/
+
+$list-props: (
+	'u-list-none': none,
+	'u-list-disc': disc,
+	'u-list-decimal': decimal
+);
+
+@include utility-generator('list-style-type', $list-props);
+

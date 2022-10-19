@@ -1,0 +1,53 @@
+@use './../../2-abstract/mixins/utility-generator' as *;
+
+/**
+* @section Width
+* @weight 1
+* @key sizing.width
+* @description Sets the width of the element’s content area.
+* @loop u-w-%, 0.5, 1, 1.5, 2, 2.5, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 30, 40, 50, 60, 70, 80, 90, 100, 25%, 33%, 50%, 66%, 75%, 100%, auto, screen
+*/
+
+$width-props: (
+	"u-w-1":var(--ald-g-space-1),
+	"u-w-2":var(--ald-g-space-2),
+	"u-w-3":var(--ald-g-space-3),
+	"u-w-4":var(--ald-g-space-4),
+	"u-w-5":var(--ald-g-space-5),
+	"u-w-6":var(--ald-g-space-6),
+	"u-w-7":var(--ald-g-space-7),
+	"u-w-8":var(--ald-g-space-8),
+	"u-w-9":var(--ald-g-space-9),
+	"u-w-10":var(--ald-g-space-10),
+	"u-w-11":var(--ald-g-space-11),
+	"u-w-12":var(--ald-g-space-12),
+	"u-w-13":var(--ald-g-space-13),
+	"u-w-14":var(--ald-g-space-14),
+	"u-w-15":var(--ald-g-space-15),
+	"u-w-16":var(--ald-g-space-16),
+	"u-w-17":var(--ald-g-space-17),
+	"u-w-18":var(--ald-g-space-18),
+	"u-w-19":var(--ald-g-space-19),
+	"u-w-20":var(--ald-g-space-20),
+	"u-w-30":var(--ald-g-space-30),
+	"u-w-40":var(--ald-g-space-40),
+	"u-w-50":var(--ald-g-space-50),
+	"u-w-60":var(--ald-g-space-60),
+	"u-w-70":var(--ald-g-space-70),
+	"u-w-80":var(--ald-g-space-80),
+	"u-w-90":var(--ald-g-space-90),
+	"u-w-100":var(--ald-g-space-100),
+	"u-w-16#{\%}": calc(100%/6),
+	"u-w-25#{\%}": 25%,
+	"u-w-33#{\%}": calc(100%/3),
+	"u-w-50#{\%}": 50%,
+	"u-w-66#{\%}": calc(100%/1.5),
+	"u-w-75#{\%}": 75%,
+	"u-w-100#{\%}": 100%,
+	"u-w-auto": auto,
+	"u-w-min": min-content,
+	"u-w-max": max-content,
+	"u-w-screen": 100vw
+);
+
+@include utility-generator('width', $width-props);

@@ -1,0 +1,120 @@
+@use './../../1-config/sass-variables/breakpoints' as *;
+@use './../../1-config/sass-variables/separator'as *;
+
+/**
+* @section Grid
+* @description Provides 12 column/grid layout utility classes.
+* @weight 9
+* @key flexgrid.grid
+*/
+
+/*
+* @section Grid container
+* @description Containers are wrappers for columns
+* @key flexgrid.grid.container
+* @weight 1
+*/
+
+.u-grid {
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: calc(var(--ald-g-space-2) * -1);
+	margin-left: calc(var(--ald-g-space-2) * -1);
+	margin-top: calc(var(--ald-g-space-2) * -1);
+}
+
+.u-grid > .u-col,
+.u-grid > [class*="u-col"] {
+	box-sizing: border-box;
+}
+
+.u-grid-nogutter {
+	/* @description This class disables gutters on a grid container and its columns. */
+	margin-right: 0;
+	margin-left: 0;
+	margin-top: 0;
+}
+
+.u-grid-nogutter > .u-col,
+.u-grid-nogutter > [class*="u-col-"] {
+	padding: 0;
+}
+
+/*
+* @section Auto width columns
+* @key flexgrid.grid.autocols
+* @weight 2
+*/
+
+
+.u-col {
+	flex-grow: 1;
+	flex-basis: 0;
+	padding: var(--ald-g-space-2);
+}
+
+/*
+* @section Fixed width columns
+* @key flexgrid.grid.cols
+* @weight 3
+*/
+
+.u-col-fixed {
+	flex: 0 0 auto;
+	padding: var(--ald-g-space-2);
+}
+
+/**
+* @section Equal width columns
+* @key flexgrid.grid.equalcols
+* @virtual u-col-1 A single column
+* @virtual u-col-2 Two columns
+* @virtual u-col-3 Three columns (quarter width)
+* @virtual u-col-4 Four columns (one-third width)
+* @virtual u-col-5 Five columns
+* @virtual u-col-6 Six columns (half width)
+* @virtual u-col-7 Seven columns
+* @virtual u-col-8 Eight columns (two-thirds width)
+* @virtual u-col-9 Nine columns (three-quarters width)
+* @virtual u-col-10 Ten columns 
+* @virtual u-col-11 Eleven columns
+* @virtual u-col-12 Twelve columns (full width)
+* @weight 4
+*/
+
+$grid-columns: (
+	"u-col-1": 8.3333%,
+	"u-col-2": 16.6667%,
+	"u-col-3": 25%,
+	"u-col-4": 33.3333%,
+	"u-col-5": 41.6667%,
+	"u-col-6": 50%,
+	"u-col-7": 58.3333%,
+	"u-col-8": 66.6667%,
+	"u-col-9": 75%,
+	"u-col-10": 83.3333%,
+	"u-col-11": 91.6667%,
+	"u-col-12": 100%
+);
+
+@each $col,$width in $grid-columns {
+	.#{$col} {
+		flex: 0 0 auto;
+		padding: var(--ald-g-space-2);
+		width: #{$width};
+	}
+}
+
+@each $key, $val in $breakpoints {
+	@media screen and (min-width: #{$val}) {
+		.#{$key + $separator} {
+			@each $col,$width in $grid-columns {
+				&#{$col} {
+					flex: 0 0 auto;
+					padding: var(--ald-g-space-2);
+					width: #{$width};
+				}
+			}
+		}
+	}
+}

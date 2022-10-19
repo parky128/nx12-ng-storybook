@@ -1,0 +1,14 @@
+/**
+* @section Panel
+* @weight 1
+* @key panel
+* @tag compositional
+* @description Panels are bordered boxes where you can place texts, lists, form fields and other elements
+*/
+
+.c-panel {
+	border: 1px solid rgb(var(--ald-g-color-border-primary));
+	background-color: rgb(var(--ald-g-color-white));
+	padding: var(--ald-g-space-4);
+	border-radius: var(--ald-g-radius-md);
+}

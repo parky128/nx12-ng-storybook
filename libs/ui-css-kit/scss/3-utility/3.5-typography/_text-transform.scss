@@ -1,0 +1,18 @@
+@use './../../2-abstract/mixins/utility-generator' as *;
+
+/**
+* @section Text Transformation
+* @description Controls text case and capitalization
+* @key typography.text-transform
+* @loop u-%, uppercase, lowercase, normal-case
+*/
+
+$transform-props: (
+	'u-uppercase': uppercase,
+	'u-lowercase': lowercase,
+	'u-capitalize': capitalize,
+	'u-normal-case': none
+);
+
+@include utility-generator('text-transform', $transform-props);
+

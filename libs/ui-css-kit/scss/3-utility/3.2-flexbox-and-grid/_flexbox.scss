@@ -1,0 +1,114 @@
+@use './../../2-abstract/mixins/utility-generator' as *;
+
+/**
+* @section Flexbox & Grid
+* @title Flexbox & Grid
+* @key flexgrid
+* @weight 2
+*/
+ 
+/**
+* @section Direction
+* @description Controls how flex items are placed in the flex container
+* @key flexgrid.direction
+* @weight 1
+*/
+
+$direction-props: (
+	'u-flex-row': row,
+	'u-flex-row-reverse': row-reverse,
+	'u-flex-col': column
+);
+
+@include utility-generator('flex-direction', $direction-props);
+
+/**
+* @section Wrapping
+* @description Controls whether flex items are forced onto one line or can wrap onto multiple lines
+* @key flexgrid.wrap
+* @weight 2
+*/
+
+$wrap-props: (
+	'u-flex-wrap': wrap,
+	'u-flex-nowrap': nowrap
+);
+
+@include utility-generator('flex-wrap', $wrap-props);
+
+/**
+* @section Grow/Shrink
+* @description Controls the flex growing and shrinking factor
+* @key flexgrid.expand
+* @weight 3
+*/
+
+$grow-props: (
+	'u-flex-grow-0': 0,
+	'u-flex-grow': 1
+);
+
+@include utility-generator('flex-grow', $grow-props);
+
+$shrink-props: (
+	'u-flex-shrink-0': 0,
+	'u-flex-shrink': 1
+);
+
+@include utility-generator('flex-shrink', $shrink-props);
+
+$flex-props: (
+	'u-flex-1': 1 1 0%,
+	'u-flex-none': none
+);
+
+@include utility-generator('flex', $flex-props);
+
+/**
+* @section Distribution
+* @description Controls how flex elements are distributed within a flex container 
+* @key flexgrid.distribution
+* @weight 4
+*/
+
+$justify-props: (
+	'u-justify-start': flex-start,
+	'u-justify-end': flex-end,
+	'u-justify-center': center,
+	'u-justify-between': space-between,
+	'u-justify-around': space-around,
+	'u-justify-evenly': space-evenly
+);
+
+@include utility-generator('justify-content', $justify-props);
+
+/**
+* @section Alignment
+* @description Controls the alignment of items on the Cross Axis. 
+* @key flexgrid.alignment
+* @weight 5
+*/
+
+$alignment-props: (
+	'u-items-start': flex-start,
+	'u-items-end': flex-end,
+	'u-items-center': center,
+	'u-items-stretch': stretch
+);
+
+@include utility-generator('align-items', $alignment-props);
+
+/**
+* @section Self alignment
+* @description Overrides a grid or flex item's align-items value. Sub-property which makes possible to override the align-items value for specific flex items.
+* @key flexgrid.selfalignment
+* @weight 6
+*/
+
+$self-props: (
+	'u-self-start': flex-start,
+	'u-self-end': flex-end,
+	'u-self-center': center
+);
+
+@include utility-generator('align-self', $self-props);

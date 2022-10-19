@@ -1,0 +1,14 @@
+@use './../2-abstract/mixins/font-size' as *;
+
+:root {
+    --default-font-color: var(--ald-g-color-text-primary);
+}
+
+[data-color-theme='dark'] {
+    --default-font-color: var(--ald-g-color-dark-text-primary);
+}
+
+body {
+	@include font-size(sm);
+	color: rgb(var(--default-font-color));
+}

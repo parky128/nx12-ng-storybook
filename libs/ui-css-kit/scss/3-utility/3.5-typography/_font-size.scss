@@ -1,0 +1,22 @@
+@use './../../1-config/sass-variables/font-sizes' as *;
+@use './../../2-abstract/mixins/font-size' as *;
+
+/**
+* @section Typography
+* @title Typography
+* @weight 5
+* @key typography
+*/
+
+/*
+* @section Font Size
+* @description Sets the size and height of the font
+* @key typography.size
+* @loop u-text-%, xxxs, xxs, xs, sm, md, lg, xxl, xxl, xxxl
+*/
+
+@each $name, $size in $font-sizes {
+	.u-text-#{$name} {
+		@include font-size($name, $important: false);
+	}
+}

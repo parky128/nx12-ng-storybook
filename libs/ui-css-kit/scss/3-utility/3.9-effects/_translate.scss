@@ -1,0 +1,19 @@
+@use './../../2-abstract/mixins/utility-generator' as *;
+
+/**
+* @section Translate
+* @key effects.translate
+* @description Translates elements with transform
+* @loop u-translate-%, x-0, x-50%, x-100%, y-0, y-50%, y-100%
+*/
+
+$translate-props: (
+	'u-translate-x-0': translateX(0%),
+	'u-translate-x-50#{\%}': translateX(50%),
+	'u-translate-x-100#{\%}': translateX(100%),
+	'u-translate-y-0': translateY(0%),
+	'u-translate-y-50#{\%}': translateY(50%),
+	'u-translate-y-100#{\%}': translateY(100%)
+);
+
+@include utility-generator('transform', $translate-props);

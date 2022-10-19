@@ -1,0 +1,16 @@
+{
+  "name": "@al/ui-css-kit",
+  "version": "1.1.96",
+  "description": "This CSS only library manages global styles, component styles, and low-level utility classes.",
+  "browserslist": [
+    "last 2 versions",
+    "IE 11"
+  ],
+  "scripts": {
+    "start": "browser-sync start --server --files '*.html', 'css/*.css' "
+  },
+  "dependencies": {
+    "modern-normalize": "^1.1.0",
+    "browser-sync": "^2.27.7"
+  }
+}

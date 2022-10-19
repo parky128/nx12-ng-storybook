@@ -1,0 +1,16 @@
+/**
+* @section Text Overflow
+* @description Controls the way that overflowing text is treated
+* @key typography.text-overflow
+*/
+
+.u-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    /* @description Use truncate to truncate overflowing text with an ellipsis */
+}
+
+.u-overflow-ellipsis {
+    text-overflow: ellipsis;
+}
