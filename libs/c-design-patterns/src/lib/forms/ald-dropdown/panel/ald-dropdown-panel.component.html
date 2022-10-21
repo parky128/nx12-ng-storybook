@@ -1,0 +1,13 @@
+<div cdkTrapFocus cdkTrapFocusAutoCapture
+    class="ald-dropdown-panel"
+    [ngClass]="{
+        'ald-dropdown-panel--sm': width === 'sm',
+        'ald-dropdown-panel--md': width === 'md',
+        'ald-dropdown-panel--lg': width === 'lg',
+        'ald-dropdown-panel--xl': width === 'xl',
+        'ald-dropdown-panel--auto': width === 'auto'
+    }">
+
+    <ng-content></ng-content>
+
+</div>

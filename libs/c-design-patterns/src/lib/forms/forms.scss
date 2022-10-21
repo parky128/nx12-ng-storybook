@@ -1,0 +1,18 @@
+:root {
+    --ald-forms-highlight-bg: var(--ald-g-color-highlight);
+    --ald-forms-bg: var(--ald-g-color-white);
+    --ald-forms-focus: var(--ald-g-color-focus);
+    --ald-forms-text-primary: var(--ald-g-color-text-primary);
+    --ald-forms-text-secondary: var(--ald-g-color-text-secondary);
+    --ald-forms-b: var(--ald-g-color-border-primary);
+    --ald-forms-b-error: var(--ald-g-color-red-500);
+}
+
+[data-color-theme='dark'] {
+    --ald-forms-highlight-bg: var(--ald-g-color-dark-highlight);
+    --ald-forms-bg: var(--ald-g-color-gray-dark-400);
+    --ald-forms-focus: var(--ald-g-color-dark-focus);
+    --ald-forms-text-primary: var(--ald-g-color-gray-300);
+    --ald-forms-text-secondary: var(--ald-g-color-gray-mid-500);
+    --ald-forms-b: var(--ald-g-color-gray-dark-100);
+}

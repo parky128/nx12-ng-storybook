@@ -1,6 +1,7 @@
-import { AldOptionItem, IconClass } from '../../common/types/al-common.types';
+import { AldOptionItem } from '../../common/types/al-common.types';
+import type {IconClass}  from '../../common/types/al-common.types';
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
-import { BadgeVariant } from '../types';
+import type { BadgeVariant } from '../types';
 
 /**
  * Badges add metadata or indicate status of items.

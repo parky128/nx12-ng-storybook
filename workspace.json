@@ -56,6 +56,16 @@
               "options": {
                   "uiFramework": "@storybook/angular",
                   "port": 4400,
+                  "styles": [
+                    ".aliases/@al/ui-css-kit/scss/index.scss",
+                    ".aliases/@al/ui-css-kit/scss/5-global/_body.scss",
+                    ".aliases/@al/ui-css-kit/scss/5-global/_h-p-elements.scss",
+                    ".aliases/@al/ui-css-kit/scss/5-global/_list.scss",
+                    "@angular/cdk/overlay-prebuilt.css"
+                ],
+                "stylePreprocessorOptions": {
+                    "includePaths": [".aliases"]
+                },
                   "config": {
                       "configFolder": "libs/c-design-patterns/.storybook"
                   },

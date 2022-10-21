@@ -1,0 +1,22 @@
+<div class="ald-icon"
+    [ngClass]="[
+        size === 'sm' ? 'ald-icon--sm': '',
+        size === 'md' ? 'ald-icon--md': '',
+        size === 'lg' ? 'ald-icon--lg': '',
+        size === 'xl' ? 'ald-icon--xl': '',
+    ]"
+>
+    <i
+        [ngClass]="[
+            iconClass ? iconClass : 'material-icons',
+            color ? color : 'ald-icon--no-color-set',
+            size === 'sm' ? 'c-icon-sm': '',
+            size === 'md' ? 'c-icon-md': '',
+            size === 'lg' ? 'c-icon-lg': '',
+            size === 'xl' ? 'c-icon-xl': '',
+        ]"
+        [style.opacity]="opacity"
+    >
+        {{ icon }}
+    </i>
+</div>

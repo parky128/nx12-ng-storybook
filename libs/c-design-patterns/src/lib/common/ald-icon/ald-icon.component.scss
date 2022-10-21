@@ -1,0 +1,43 @@
+::ng-deep :root {
+    --ald-icon-color: var(--ald-g-color-icon-primary);
+}
+
+::ng-deep [data-color-theme='dark'] {
+    --ald-icon-color: var(--ald-g-color-dark-icon-primary);
+}
+
+.ald-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.ald-icon--sm {
+    width: var(--ald-g-space-5);
+    height: var(--ald-g-space-5);
+}
+
+.ald-icon--md {
+    width: var(--ald-g-space-6);
+    height: var(--ald-g-space-6);
+}
+
+.ald-icon--lg {
+    width: var(--ald-g-space-9);
+    height: var(--ald-g-space-9);
+}
+
+.ald-icon--xl {
+    width: var(--ald-g-space-12);
+    height: var(--ald-g-space-12);
+}
+
+.ald-icon--no-color-set {
+    color: rgb(var(--ald-icon-color));
+}
+
+.ald-icon--child-of-button {
+    color: inherit;
+}

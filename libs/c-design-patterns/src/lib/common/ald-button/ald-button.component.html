@@ -1,0 +1,54 @@
+<button
+    [type]="type"
+    [ngClass]="[
+
+        variant === 'unstyled' ? 'c-reset-button': 'ald-btn',
+
+        (icon && label) ? 'u-flex u-justify-center u-items-center u-gap-1' : '',
+        (icon && label && iconPosition === 'right') ? 'u-flex-row-reverse' : '',
+
+        fullwidth ? 'u-w-100%' : '',
+
+        (label && size === 'xs') ? 'ald-btn--xs': '',
+        (label && size === 'sm') ? 'ald-btn--sm': '',
+        (label && size === 'md') ? 'ald-btn--md': '',
+        (label && size === 'lg') ? 'ald-btn--lg': '',
+
+        (!label && icon && size === 'xs') ? 'ald-btn-icon--xs' : '',
+        (!label && icon && size === 'sm') ? 'ald-btn-icon--sm' : '',
+        (!label && icon && size === 'md') ? 'ald-btn-icon--md' : '',
+        (!label && icon && size === 'lg') ? 'ald-btn-icon--lg' : '',
+
+        variant === 'ghost' && !selected ? 'ald-btn--ghost' : '',
+        variant === 'primary' ? 'ald-btn--primary' : '',
+        variant === 'secondary' ? 'ald-btn--secondary' : '',
+        variant === 'light' ? 'ald-btn--light' : '',
+        variant === 'light-ghost' ? 'ald-btn--light-ghost' : '',
+        variant === 'success' ? 'ald-btn--success' : '',
+        variant === 'danger' ? 'ald-btn--danger' : '',
+        variant === 'link' ? 'ald-btn--link' : '',
+
+        variant === 'ghost' && selected ? 'ald-btn--selected' : '',
+
+        disabled ? 'u-opacity-50 u-cursor-not-allowed' : 'u-cursor-pointer',
+    ]"
+
+    [disabled]="disabled">
+
+    <div *ngIf="icon && !loading" class="u-flex u-justify-center u-items-center u-pointer-events-none">
+        <ald-icon [icon]="icon" [iconClass]="iconClass" [size]="iconSize" color="ald-icon--child-of-button"></ald-icon>
+    </div>
+
+    <ng-container *ngIf="loading">
+        <ald-icon icon="rotate_right" class="animate-spin" [size]="iconSize"></ald-icon>
+        <!-- TODO: Replace above with spinner - awaiting updates to scall the button for button sizes -->
+        <!-- <al-loading-spinner></al-loading-spinner> -->
+    </ng-container>
+
+	<div class="u-pointer-events-none" [ngClass]="[
+        (label && icon && iconPosition === 'left') ? 'u-pr-1': '',
+        (label && icon && iconPosition === 'right') ? 'u-pl-1': '',
+    ]">
+        {{ label }}
+    </div>
+</button>

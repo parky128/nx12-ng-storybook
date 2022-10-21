@@ -1,0 +1,25 @@
+<div aria-label="menu" role="menu" class="ald-menu">
+    <ng-container *ngFor="let item of options; let index = index;">
+        <div
+            class="ald-menu-item"
+            [ngClass]="[
+                item.selected && checkable ? 'ald-menu-item--selected': '',
+                item.disabled ? 'ald-menu-item--disabled' : ''
+            ]"
+            [attr.aria-disabled]="item.disabled ?? false"
+            role="menuitem"
+            tabindex="0"
+            (click)="selectedItem(item, index)"
+        >
+            <ng-container *ngIf="!item.hyperlink; else hyperlink">
+                <div class="ald-menu-item__label">{{ item.label }}</div>
+                <div *ngIf="item.selected && checkable">
+                    <ald-icon icon="check" size="sm" class="u-text-icon"></ald-icon>
+                </div>
+            </ng-container>
+            <ng-template #hyperlink>
+                <a class="hyperlink" [href]="item.hyperlink" target="_blank">{{ item.label }}</a>
+            </ng-template>
+        </div>
+    </ng-container>
+</div>

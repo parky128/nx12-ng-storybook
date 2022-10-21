@@ -1,0 +1,36 @@
+::ng-deep :root {
+    --ald-dropdown-panel-bg: var(--ald-g-color-white);
+    --ald-dropdown-panel-border: var(--ald-g-color-border-primary);
+}
+
+::ng-deep [data-color-theme='dark'] {
+    --ald-dropdown-panel-bg: var(--ald-g-color-gray-dark-500);
+    --ald-dropdown-panel-border: var(--ald-g-color-gray-dark-300);
+}
+
+
+.ald-dropdown-panel {
+    box-shadow: var(--ald-g-shadow-md);
+    border-radius: var(--ald-g-radius-sm);
+    border:1px solid rgb(var(--ald-dropdown-panel-border));
+    margin-top: var(--ald-g-space-1);
+    background-color: rgb(var(--ald-dropdown-panel-bg));
+}
+
+.ald-dropdown-panel--sm {
+    width: var(--ald-g-space-40);
+}
+.ald-dropdown-panel--md {
+    width: var(--ald-g-space-50);
+}
+.ald-dropdown-panel--lg {
+    width: var(--ald-g-space-60);
+}
+.ald-dropdown-panel--xl {
+    width: var(--ald-g-space-90);
+}
+
+.ald-dropdown-panel--auto {
+    min-width: var(--ald-g-space-30);
+    max-width: var(--ald-g-space-60);
+}

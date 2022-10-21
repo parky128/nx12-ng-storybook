@@ -9,9 +9,10 @@ module.exports = {
     "@storybook/addon-interactions",
     "@storybook/preset-scss",
     'storybook-theme-toggle',
-    'storybook-dark-mode'
+    'storybook-dark-mode',
+    // 'storybook-addon-next'
   ],
   core: {
-    builder: "webpack5"
+    builder: "@storybook/builder-webpack5"
   }
 };

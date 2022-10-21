@@ -3,11 +3,11 @@ import { setCompodocJson } from "@storybook/addon-docs/angular";
 import { componentWrapperDecorator } from '@storybook/angular';
 import docJson from "../documentation.json";
 setCompodocJson(docJson);
-import '!style-loader!css-loader!sass-loader!../src/styles/global.scss';
-import '!style-loader!css-loader!sass-loader!../../ui-css-kit/scss/index.scss';
-import '!style-loader!css-loader!sass-loader!../../ui-css-kit/scss/5-global/_body.scss';
-import '!style-loader!css-loader!sass-loader!../../ui-css-kit/scss/5-global/_h-p-elements.scss';
-import '!style-loader!css-loader!sass-loader!../../ui-css-kit/scss/5-global/_list.scss';
+import '!style-loader!css-loader!sass-loader!../../../.aliases/@al/ui-css-kit/scss/index.scss';
+// import '!style-loader!css-loader!sass-loader!../../ui-css-kit/scss/index.scss';
+// import '!style-loader!css-loader!sass-loader!../../ui-css-kit/scss/5-global/_body.scss';
+// import '!style-loader!css-loader!sass-loader!../../ui-css-kit/scss/5-global/_h-p-elements.scss';
+// import '!style-loader!css-loader!sass-loader!../../ui-css-kit/scss/5-global/_list.scss';
 
 
 export const parameters = {

@@ -1,0 +1,28 @@
+<ald-button
+    cdkOverlayOrigin
+    #trigger="cdkOverlayOrigin"
+    [variant]="variant"
+    [size]="size"
+    [icon]="icon"
+    [label]="label"
+    [iconPosition]="iconPosition"
+    [iconClass]="iconClass"
+    [disabled]="disabled"
+    [selected]="selected"
+    (click)="open()"
+>
+</ald-button>
+
+<ng-template
+    #overlay
+    cdkConnectedOverlay
+    [cdkConnectedOverlayOrigin]="trigger"
+    [cdkConnectedOverlayOpen]="isOpen"
+    [cdkConnectedOverlayHasBackdrop]="true"
+    [cdkConnectedOverlayBackdropClass]="'cdk-overlay-transparent-backdrop'"
+    (backdropClick)="close()"
+>
+    <ald-dropdown-panel [width]="width">
+        <ng-content></ng-content>
+    </ald-dropdown-panel>
+</ng-template>
