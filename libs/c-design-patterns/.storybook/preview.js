@@ -1,13 +1,9 @@
 // import '@angular/localize/init';
 import { setCompodocJson } from "@storybook/addon-docs/angular";
-import { componentWrapperDecorator } from '@storybook/angular';
+import { componentWrapperDecorator, moduleMetadata } from '@storybook/angular';
 import docJson from "../documentation.json";
 setCompodocJson(docJson);
-import '!style-loader!css-loader!sass-loader!../../../.aliases/@al/ui-css-kit/scss/index.scss';
-// import '!style-loader!css-loader!sass-loader!../../ui-css-kit/scss/index.scss';
-// import '!style-loader!css-loader!sass-loader!../../ui-css-kit/scss/5-global/_body.scss';
-// import '!style-loader!css-loader!sass-loader!../../ui-css-kit/scss/5-global/_h-p-elements.scss';
-// import '!style-loader!css-loader!sass-loader!../../ui-css-kit/scss/5-global/_list.scss';
+
 
 
 export const parameters = {
@@ -24,5 +20,9 @@ export const parameters = {
 
 
 export const decorators = [
+    moduleMetadata({
+        providers: [ThemeModule.forRoot().providers]
+      }),
+
     componentWrapperDecorator((story) => `<div class="ald-story-full-width ald-story-full-height u-p-6">${story}</div>`),
 ];
